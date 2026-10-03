@@ -1,0 +1,17 @@
+:root{--bg:#070d0c;--card:#0f1917;--line:#1b2b28;--text:#e8f4f1;--mut:#7d9993;--acc:#2dd4bf;--acc2:#0ea5a0}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(900px 400px at 80% -10%,#0f2e2a,transparent),var(--bg);color:var(--text);min-height:100vh}
+.wrap{max-width:520px;margin:0 auto;padding:16px 16px 96px}.top{display:flex;justify-content:space-between;align-items:center;padding:6px 2px}.logo{font-weight:800;letter-spacing:.3px;color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 8px 30px #0006}
+.bal{background:linear-gradient(135deg,#0d6b63,#0a2f2c 70%);border-color:#14524c}.bal h1{font-size:36px;margin:6px 0 12px;letter-spacing:-.5px}
+h2,h3{margin:0 0 10px}
+input,select,textarea{width:100%;padding:13px;background:#0a1311;color:var(--text);border:1px solid var(--line);border-radius:12px;margin:6px 0;font-size:16px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--acc)}
+button{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#032;font-weight:700;border:0;border-radius:12px;padding:12px 16px;font-size:15px;cursor:pointer;margin:4px 6px 4px 0;transition:.15s}
+button:hover{filter:brightness(1.1);transform:translateY(-1px)}button.alt{background:#16322e;color:var(--text)}button.red{background:#ef4444;color:#fff}button:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.chips{display:flex;flex-wrap:wrap;margin-bottom:6px}
+nav{position:fixed;bottom:0;left:0;right:0;background:#0b1513ee;backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:8px}
+nav button{background:none;color:var(--mut);font-size:12px;box-shadow:none;margin:0}nav button.on{color:var(--acc)}
+.err{background:#3a1416;color:#ffb4b4;padding:10px;border-radius:10px;margin:6px 0}.ok{background:#0f3a33;color:#b9f5e8;padding:10px;border-radius:10px;margin:6px 0}
+.LOW,.SAFE,.in{color:#34d399}.MEDIUM,.LOW_RISK,.SUSPICIOUS{color:#fbbf24}.HIGH,.CRITICAL,.HIGH_RISK,.REPORTED_SCAM{color:#f87171}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}.small{font-size:13px;color:var(--mut)}
+@media(min-width:900px){nav{top:0;bottom:auto;width:150px;height:100vh;flex-direction:column;justify-content:flex-start;gap:6px;border-right:1px solid var(--line);border-top:0;padding-top:24px}.wrap{margin-left:180px}}

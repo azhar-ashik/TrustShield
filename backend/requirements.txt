@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+bcrypt
+PyJWT
+httpx
+numpy
+scikit-learn
+joblib
