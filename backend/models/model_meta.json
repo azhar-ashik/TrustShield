@@ -1,0 +1,56 @@
+{
+  "dataset": "trustshield_paysim_10k_demo.csv",
+  "dataset_type": "generated PaySim-compatible demo",
+  "transaction_scope": "TRANSFER only",
+  "features": [
+    "amount_log",
+    "amount_ratio",
+    "new_recipient",
+    "night",
+    "sender_tx_count_log",
+    "sender_avg_gap_hours",
+    "sender_amount_zscore"
+  ],
+  "target": "isFraud",
+  "leakage_policy": "Model excludes oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest and isFlaggedFraud.",
+  "split_method": "chronological 70/15/15",
+  "model_selection_metric": "validation PR-AUC",
+  "selected_model": "logistic_regression",
+  "threshold": 0.9574917916923686,
+  "model_comparison": {
+    "logistic_regression": {
+      "pr_auc": 0.2128001744667793,
+      "roc_auc": 0.8688132415219991,
+      "precision": 0.38095238095238093,
+      "recall": 0.38095238095238093,
+      "f1": 0.38095238095238093,
+      "threshold": 0.9574917916923686
+    },
+    "random_forest": {
+      "pr_auc": 0.11181682925137136,
+      "roc_auc": 0.83515986163644,
+      "precision": 0.20512820512820512,
+      "recall": 0.38095238095238093,
+      "f1": 0.26666666666666666,
+      "threshold": 0.4285786402564356
+    },
+    "gradient_boosting": {
+      "pr_auc": 0.1729113633094995,
+      "roc_auc": 0.8224873112856819,
+      "precision": 0.2916666666666667,
+      "recall": 0.3333333333333333,
+      "f1": 0.3111111111111111,
+      "threshold": 0.7426703529122011
+    }
+  },
+  "test_metrics": {
+    "pr_auc": 0.338153428389473,
+    "roc_auc": 0.9342818428184282,
+    "precision": 0.4444444444444444,
+    "recall": 0.4444444444444444,
+    "f1": 0.4444444444444444
+  },
+  "rows": 10000,
+  "fraud_rows": 120,
+  "fraud_rate": 0.012
+}

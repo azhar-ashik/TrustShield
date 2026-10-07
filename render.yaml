@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: trustshield-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python train.py
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: "https://your-app.vercel.app"
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        value: "5429313710"
+      - key: AB_TEST_ENABLED
+        value: "false"
+      - key: ANTHROPIC_API_KEY
+        sync: false
