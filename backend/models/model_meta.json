@@ -16,7 +16,7 @@
   "split_method": "chronological 70/15/15",
   "model_selection_metric": "validation PR-AUC",
   "selected_model": "logistic_regression",
-  "threshold": 0.9574917916923686,
+  "threshold": 0.9574917554855347,
   "model_comparison": {
     "logistic_regression": {
       "pr_auc": 0.2128001744667793,
@@ -24,15 +24,15 @@
       "precision": 0.38095238095238093,
       "recall": 0.38095238095238093,
       "f1": 0.38095238095238093,
-      "threshold": 0.9574917916923686
+      "threshold": 0.9574917554855347
     },
     "random_forest": {
-      "pr_auc": 0.11181682925137136,
-      "roc_auc": 0.83515986163644,
-      "precision": 0.20512820512820512,
+      "pr_auc": 0.10922161449632102,
+      "roc_auc": 0.8351436976691559,
+      "precision": 0.2,
       "recall": 0.38095238095238093,
-      "f1": 0.26666666666666666,
-      "threshold": 0.4285786402564356
+      "f1": 0.26229508196721313,
+      "threshold": 0.41673698899001793
     },
     "gradient_boosting": {
       "pr_auc": 0.1729113633094995,
